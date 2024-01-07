@@ -1,0 +1,6 @@
+data/org.elixir.elixir.desktop.in
+data/org.elixir.elixir.metainfo.xml.in
+data/org.elixir.elixir.gschema.xml
+src/main.py
+src/window.py
+src/window.ui
