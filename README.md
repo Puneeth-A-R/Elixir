@@ -17,6 +17,7 @@ Run the following command to start the server:
 
 ```bash      
 uvicorn main:app --reload
+```
 
 ## Literature survey 
 
