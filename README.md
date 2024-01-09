@@ -4,6 +4,20 @@ Elixir is a Large Language Model (LLM) based agent for generating user content. 
 
 ![alt text](archive/shot.png "Title")
 
+## Installation
+
+Run the following commands to download and set up the project:
+
+```bash
+  git clone https://github.com/Puneeth-A-R/Elixir.git
+  cd Elixir
+  pip install -r requirements.txt
+```
+Run the following command to start the server:
+
+```bash      
+uvicorn main:app --reload
+
 ## Literature survey 
 
 | **#** | **Title** | **Year** | **Authors** | **Paper Link** |
