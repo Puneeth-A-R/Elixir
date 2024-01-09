@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="Adw" version="1.0" />
+
+  <template class="ElixirWindow" parent="AdwApplicationWindow">
+    <property name="default-width">600</property>
+    <property name="default-height">600</property>
+    <property name="title">Elixir</property>
+
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+
+
+        <!-- header bar -->
+        <child>
+          <object class="GtkHeaderBar" id="header_bar">
+            <child type="end">
+              <object class="GtkMenuButton">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="menu-model">primary_menu</property>
+              </object>
+            </child>
+
+            <style>
+              <class name="flat" />
+            </style>
+
+            <property name="title-widget">
+              <object class="AdwWindowTitle">
+                <property name="title" translatable="no">Elixir</property>
+              </object>
+            </property>
+
+          </object>
+        </child>
+        <!-- header bar / -->
+
+
+        <child>
+          <object class="AdwClamp">
+            <property name="maximum-size">2500</property>
+
+            <child>
+
+
+              <object class="GtkBox">
+                <property name="margin-top">25</property>
+                <property name="margin-bottom">25</property>
+                <property name="margin-start">25</property>
+                <property name="margin-end">25</property>
+                <property name="orientation">1</property>
+
+                <child>
+
+                  <object class="GtkScrolledWindow">
+                    <property name="height-request">180</property>
+                    <property name="width-request">600</property>
+                    <property name="margin-top">10</property>
+                    <property name="vexpand">true</property>
+                    <property name="hexpand">true</property>
+                    <child>
+                      <object class="GtkListBox" id="list_box_editable">
+                        <property name="valign">1</property>
+                        <property name="selection-mode">0</property>
+                        <style>
+                          <class name="boxed-list" />
+                        </style>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="margin-start">10</property>
+                            <property name="margin-end">10</property>
+
+
+                            <property name="title" translatable="true">Me</property>
+                            <style>
+                              <class name="property" />
+                            </style>
+                            <property name="subtitle" translatable="true">hello</property>
+
+
+                            <child type="suffix">
+                              <object class="GtkButton" id="activatable_toggle">
+                                <property name="icon-name">edit-copy-symbolic</property>
+                                <property name="valign">3</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="margin-start">10</property>
+                            <property name="margin-end">10</property>
+                            <property name="title" translatable="true">Hello 👋 </property>
+
+
+                            <property name="title" translatable="true">Elixir</property>
+                            <style>
+                              <class name="property" />
+                            </style>
+                            <property name="subtitle" translatable="true">Hello 👋 </property>
+
+
+                            <child type="suffix">
+                              <object class="GtkButton" id="activatableoggle">
+                                <property name="icon-name">edit-copy-symbolic</property>
+                                <property name="valign">3</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+
+                        <child>
+
+                          <object class="GtkListBoxRow">
+                            <child> </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="margin-top">10</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-start">15</property>
+                                <property name="margin-end">10</property>
+                                <child>
+                                  <object class="GtkImage">
+                                    <property name="vexpand">true</property>
+                                    <property name="hexpand">true</property>
+                                    <property name="visible">True</property>
+                                    <property name="resource">/org/elixir/elixir/icons/wave.png</property>
+                                    <property name="pixel-size">256</property>
+                                    <property name="hexpand">true</property>
+                                    <property name="valign">1</property>
+                                    <property name="halign">1</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+
+
+                        </child>
+
+
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkFrame">
+                    <property name="margin-top">18</property>
+                    <property name="margin-bottom">10</property>
+                    <child>
+                      <object class="GtkScrolledWindow">
+                        <property name="height-request">100</property>
+                        <property name="width-request">600</property>
+                        <child>
+                          <object class="GtkTextView" id="textview">
+                            <property name="bottom-margin">12</property>
+                            <property name="left-margin">12</property>
+                            <property name="right-margin">12</property>
+                            <property name="top-margin">12</property>
+                            <property name="editable">true</property>
+                            <property name="cursor-visible">true</property>
+                            <property name="wrap-mode">1</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox" id="controls">
+                    <property name="spacing">10</property>
+                    <property name="margin-bottom">30</property>
+                    <property name="homogeneous">true</property>
+                    <child>
+
+                      <object class="GtkButton" id="button_forward">
+
+                        <child>
+                          <object class="AdwButtonContent">
+                            <property name="label" translatable="true">File</property>
+                            <property name="icon-name">rich-text-symbolic</property>
+                            <property name="tooltip-text">open file</property>
+                            <property name="halign">center</property>
+                          </object>
+                        </child>
+
+                        <style>
+                          <class name="pill" />
+                          <class name="destructive-action" />
+                        </style>
+
+                      </object>
+
+
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="button_reload">
+
+
+                        <child>
+                          <object class="AdwButtonContent">
+                            <property name="label" translatable="true">Send</property>
+                            <property name="icon-name">paper-plane-symbolic</property>
+                            <property name="tooltip-text">send</property>
+                            <property name="halign">center</property>
+                          </object>
+                        </child>
+
+                        <style>
+                          <class name="circular" />
+                          <class name="suggested-action" />
+                        </style>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+
+
+          </object>
+        </child>
+
+
+      </object>
+    </child>
+
+
+  </template>
+
+
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Preferences</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+        <attribute name="action">win.show-help-overlay</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_About Duel</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

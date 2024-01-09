@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/elixir/elixir">
+    <file preprocess="xml-stripblanks">window.ui</file>
+    <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
+
+    <file preprocess="xml-stripblanks">icons/xbox-controller-symbolic.svg</file>
+
+    <file preprocess="xml-stripblanks">icons/paper-plane-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/rich-text-symbolic.svg</file>
+    <file>icons/wave.png</file>
+
+  </gresource>
+</gresources>
+
