@@ -16,7 +16,7 @@ Run the following commands to download and set up the project:
 Run the following command to start the server:
 
 ```bash      
-uvicorn main:app --reload
+uvicorn src.main:app --reload
 ```
 
 ## Literature survey 
